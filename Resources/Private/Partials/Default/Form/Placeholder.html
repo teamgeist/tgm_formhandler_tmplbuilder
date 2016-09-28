@@ -1,0 +1,8 @@
+<f:if condition="{placeholder}">
+    <f:then>
+        <f:if condition="{placeholder}=='USE-LABEL'">
+            <f:then>placeholder="###LLL:{fieldname}###{f:if(condition: required, then: '*')}"</f:then>
+            <f:else>placeholder="{placeholder}"</f:else>
+        </f:if>
+    </f:then>
+</f:if>

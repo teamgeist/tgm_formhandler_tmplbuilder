@@ -1,0 +1,33 @@
+{namespace t=TGM\TgmFormhandlerTmplbuilder\ViewHelpers}
+
+<t:wrap partial="FieldGroup" arguments="{field-size:'col-md-12'}" >
+    <div class="row">
+        <div class="col-md-4">
+            <f:render partial="Select"
+                      arguments="{fieldname: 'anrede', options: {0: 'herr', 1: 'frau'}, field-size: 'col-md-6', label-size: 'col-md-6', required: 1, prepend: ' '}" />
+        </div>
+        <div class="col-md-4">
+            <f:render partial="Input"
+                      arguments="{fieldname: 'vorname', field-size: 'col-md-8', label-size: 'col-md-4', required: 1}" />
+        </div>
+        <div class="col-md-4">
+            <f:render partial="Input"
+                      arguments="{fieldname: 'nachname', field-size: 'col-md-8', label-size: 'col-md-4', required: 1}" />
+        </div>
+    </div>
+</t:wrap>
+<t:wrap partial="FieldGroup" arguments="{field-size:'col-md-12'}" >
+    <div class="row">
+        <div class="col-md-6" id="email-field" data-pitb-requires-area="#telefon-field">
+            <f:render partial="Input"
+                      arguments="{type: 'email', fieldname: 'email', field-size: 'col-md-8', label-size: 'col-md-4', required: 1, requiredSign: '²'}" />
+        </div>
+        <div class="col-md-6" id="telefon-field" data-pitb-requires-area="#email-field">
+            <f:render partial="Input"
+                      arguments="{fieldname: 'telefon', field-size: 'col-md-8', label-size: 'col-md-4', required: 1, requiredSign: '²'}" />
+        </div>
+    </div>
+</t:wrap>
+
+<f:render partial="Textarea"
+          arguments="{fieldname: 'nachricht', field-size: 'col-md-10', label-size: 'col-md-2', rows: 5, required: 1}" />

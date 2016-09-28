@@ -1,0 +1,16 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace t=TGM\TgmFormhandlerTmplbuilder\ViewHelpers}
+
+<t:wrap partial="FieldWrap" arguments="{_all}">
+    {f:if(condition: inputAddon, then: '<div class="input-group"><div class="input-group-addon">{inputAddon}</div>')}
+        <input type="{f:if(condition: type, then: type, else: 'text')}"
+                name="###formValuesPrefix###[{fieldname}]"
+                class="form-control {class}"
+                {f:render(partial: 'Placeholder', arguments: {required: required, label-size: label-size, fieldname: fieldname, placeholder: placeholder})}
+                {f:render(partial: 'DataTags', arguments: {requires-field: requires-field, requires-value: requires-value, data-tags: data-tags})}
+                id="{fieldname}"
+                value="###value_{fieldname}###"
+                {f:if(condition: required, then: 'required="required"')}
+                {f:if(condition: readonly, then: 'readonly="readonly"')} />
+    {f:if(condition: inputAddon, then: '</div>')}
+</t:wrap>

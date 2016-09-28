@@ -1,0 +1,51 @@
+.pitb-form {
+
+    /* Wird per JS aktiviert */
+    display: none;
+
+    .form-field-inner {
+        position: relative;
+    }
+
+    .form-control-feedback {
+        right: 20px;
+    }
+
+    .selectField .form-control-feedback {
+        right: 20px;
+    }
+
+    .radio-inline .form-control-feedback {
+        right: -30px;
+    }
+
+    .form-control-feedback {
+        width: 27px;
+    }
+
+    .m-t-50{
+        margin-top: 50px;
+    }
+
+    .field-group {
+        margin-bottom: 15px;
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .fieldgroup-label {
+        font-weight: bold;
+    }
+
+    // Für die Ansicht mit Label über den Feldern den Abstand nach dem Label optimieren
+    .col-md-12 {
+        &>.fieldgroup-label, &>label {
+            margin-bottom: 10px;
+        }
+    }
+
+    .checkbox.form-control-static, .radio.form-control-static {
+        margin-top: 0;
+    }
+}

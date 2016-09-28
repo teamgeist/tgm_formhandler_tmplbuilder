@@ -1,0 +1,16 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<tr>
+    <td>
+        <f:if condition="{label-size}">
+            <strong>###LLL:{fieldname}###:</strong>
+        </f:if>
+    </td>
+    <td>
+        <f:for each="{options}" as="option" iteration="iter">
+            ###IF_{fieldname}|{iter.index}###
+            X ###LLL:###value_{fieldname}|{iter.index}######<br />
+            ###IF_{fieldname}|{iter.index}###
+        </f:for>
+    </td>
+</tr>

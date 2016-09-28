@@ -1,0 +1,6 @@
+plugin.tx_tgmformhandlertmplbuilder {
+  # cat=Formhandler Formbuilder/file; type=string; label= Pfad zu angepassten Feld-Partials (Form und / oder Submitted)
+  customPartialPath = fileadmin/tgm_pitb/_global/tmpl/ext/formhandler/Partials/
+  # cat=Formhandler Formbuilder/file; type=string; label= Pfad zu eigenen Formulartemplates
+  customFormPath = fileadmin/tgm_pitb/_global/tmpl/ext/formhandler/Forms/
+}

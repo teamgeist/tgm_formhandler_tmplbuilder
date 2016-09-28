@@ -1,0 +1,2 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:./basic_settings.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:./config_example.ts">

@@ -1,0 +1,54 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace t=TGM\TgmFormhandlerTmplbuilder\ViewHelpers}
+
+<t:wrap partial="FieldWrap" arguments="{_all}">
+    <f:for each="{options}" as="option" iteration="iter">
+        <f:if condition="{inline}">
+            <f:then>
+                <label class="radio-inline form-control-static">
+                    <f:render section="radioField" arguments="{_all}" />
+                </label>
+                <f:if condition="{appendSonstiges}">
+                    <f:if condition="{iter.isLast}">
+                        <f:render section="radioFieldSonstiges" arguments="{_all}" />
+                    </f:if>
+                </f:if>
+            </f:then>
+            <f:else>
+                <div class="radio form-control-static">
+                    <label>
+                        <f:render section="radioField" arguments="{_all}" />
+                    </label>
+                </div>
+                <f:if condition="{appendSonstiges}">
+                    <f:if condition="{iter.isLast}">
+                        <f:render section="radioFieldSonstiges" arguments="{_all}" />
+                    </f:if>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:for>
+</t:wrap>
+
+<f:if condition="{appendSonstiges}">
+    <div class="clearfix"></div>
+</f:if>
+
+<f:section name="radioField">
+    <input type="radio" name="###formValuesPrefix###[{fieldname}]"
+           value="{option}" ###checked_{fieldname}_{option}###
+           {f:if(condition: required, then: 'required="required"')} />
+    ###LLL:{option}###
+</f:section>
+
+<f:section name="radioFieldSonstiges">
+    <div class="input-group">
+        <div class="input-group-addon">
+            <input type="radio" class="pitb-sonstiges-radio" name="###formValuesPrefix###[{fieldname}]"
+                   value="###LLL:{fieldname}Sonstiges###"
+                   {f:if(condition: required, then: 'required="required"')}
+                   ###checked_{fieldname}_###LLL:{fieldname}Sonstiges###### />
+        </div>
+        <input type="text" class="form-control pitb-sonstiges" placeholder="###LLL:{fieldname}Sonstiges###" />
+    </div>
+</f:section>

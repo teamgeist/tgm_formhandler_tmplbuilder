@@ -1,0 +1,9 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace t=TGM\TgmFormhandlerTmplbuilder\ViewHelpers}
+
+<t:wrap partial="FieldWrap" arguments="{_all}">
+    <button type="submit" class="btn {f:if(condition: btnClass, then: btnClass, else: 'btn-primary')}" ###submit_nextStep###>
+        {f:if(condition: label, then: label, else: 'Absenden')}
+        <span class="glyphicon {f:if(condition: glyphicon, then: glyphicon, else: 'glyphicon-circle-arrow-right')}"></span>
+    </button>
+</t:wrap>

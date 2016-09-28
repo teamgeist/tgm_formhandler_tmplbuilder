@@ -1,0 +1,27 @@
+<!-- ###TEMPLATE_FORM1### begin -->
+
+###ERROR###
+
+<div id="formhandler_contact_form">
+
+	<div class="alert alert-danger pitb-form-js-notice">
+		<span>Sie müssen Javascript aktivieren um diese Funktion nutzen zu können!</span>
+	</div>
+
+	<form class="pitb-form" method="post" action="###REL_URL###" enctype="multipart/form-data">
+
+		<input type="hidden" name="formhandler[submitted]" value="1" />
+
+		<f:render partial="Formularfelder" arguments="{_all}" />
+
+		<f:render partial="Submit" arguments="{field-size: 'col-md-12 text-right'}" />
+
+	</form>
+
+	<p>
+		* Dieses Feld muss ausgefüllt werden.<br />
+		² Mindestens eines dieser Felder muss ausgefüllt werden.
+	</p>
+
+</div>
+<!-- ###TEMPLATE_FORM1### end -->

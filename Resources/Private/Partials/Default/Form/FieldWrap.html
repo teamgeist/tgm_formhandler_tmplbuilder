@@ -1,0 +1,28 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<div class="form-group {f:if(condition: fieldname, then: '###is_error_{fieldname}###')}">
+
+    <div class="row">
+
+	    {f:if(condition: fieldname, then: '###error_{fieldname}###')}
+
+	    <f:if condition="{label-size}">
+		    <div class="{label-size}">
+			    <label class="form-control-static" for="{fieldname}">
+					###LLL:{fieldname}###<f:if condition="{required}">{f:if(condition: requiredSign, then: requiredSign, else: '*')}</f:if>
+				</label>
+			    <f:if condition="{tooltip}">
+            <span class="pitb-form-tooltip text-info" title="{tooltip}">
+                <span class="glyphicon glyphicon-{f:if(condition: tooltip-icon, then: 'tooltip-icon', else: 'info-sign')}"></span>
+            </span>
+			    </f:if>
+		    </div>
+	    </f:if>
+
+        <div class="{f:if(condition: field-size, then: field-size, else: 'col-md-12')}">
+	        RENDER_CHILD_NODES_HERE
+        </div>
+
+    </div>
+
+</div>

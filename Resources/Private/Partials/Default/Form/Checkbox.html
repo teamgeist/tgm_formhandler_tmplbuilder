@@ -1,0 +1,29 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace t=TGM\TgmFormhandlerTmplbuilder\ViewHelpers}
+
+<t:wrap partial="FieldWrap" arguments="{_all}">
+    <div class="form-field-inner radios" data-pitb-radio-count="{f:count(subject: options)}">
+        <f:for each="{options}" as="option" iteration="iter">
+            <f:if condition="{inline}">
+                <f:then>
+                    <label class="checkbox-inline form-control-static">
+                        <f:render section="checkboxField" arguments="{_all}" />
+                    </label>
+                </f:then>
+                <f:else>
+                    <div class="checkbox form-control-static">
+                        <label>
+                            <f:render section="checkboxField" arguments="{_all}" />
+                        </label>
+                    </div>
+                </f:else>
+            </f:if>
+        </f:for>
+    </div>
+</t:wrap>
+
+<f:section name="checkboxField">
+    <input type="checkbox" name="###formValuesPrefix###[{fieldname}][]"
+           value="{option}" ###checked_{fieldname}_{option}### {f:if(condition: required, then:'required="required"')} data-fv-notEmpty-message="Bitte treffen Sie mindestens eine Auswahl." />
+    ###LLL:{option}###
+</f:section>

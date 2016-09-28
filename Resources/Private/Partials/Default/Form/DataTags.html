@@ -1,0 +1,9 @@
+<f:if condition="{requires-field}">
+    data-pitb-requires-field="###formValuesPrefix###[{requires-field}]"
+    data-pitb-requires-value="{requires-value}"
+</f:if>
+<f:if condition="{data-tags}">
+    <f:for each="{data-tags}" as="data-value" key="key">
+        {key}="{data-value}"
+    </f:for>
+</f:if>

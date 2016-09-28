@@ -1,0 +1,42 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace t=TGM\TgmFormhandlerTmplbuilder\ViewHelpers}
+
+<!-- ###TEMPLATE_EMAIL_ADMIN_HTML### begin -->
+<html>
+<head>
+	<style type="text/css">
+		table {
+			font-size: 13px;
+		}
+		h4 {
+			display: none;
+		}
+		td h4 {
+			display: block;
+			font-size: 15px;
+			margin: 5px 0;
+		}
+	</style>
+</head>
+<body>
+
+<p>Über das Anmeldeformular auf TEAMGEIST wurde das Formular "Schulanmeldung" verschickt:</p>
+
+<p>Die folgenden Daten wurden übermittelt:</p>
+
+<table border="1" cellpadding="5" style="border-collapse: collapse">
+	<t:betterStripTags allowableTags="<strong><tr><td><br><br /><h1><h2><h3><h4><table>">
+		<f:render partial="Formularfelder" arguments="{_all}" />
+	</t:betterStripTags>
+</table>
+
+</body>
+</html>
+<!-- ###TEMPLATE_EMAIL_ADMIN_HTML### end -->
+
+
+<!-- ###TEMPLATE_SUBMITTEDOK### begin -->
+<!-- ###TEMPLATE_CONFIRMATION### begin -->
+<h3>Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze bei Ihnen melden.</h3>
+<!-- ###TEMPLATE_CONFIRMATION### end -->
+<!-- ###TEMPLATE_SUBMITTEDOK### end -->

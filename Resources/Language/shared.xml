@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="anrede">Anrede</label>
+			<label index="vorname">Vorname</label>
+			<label index="nachname">Nachname</label>
+			<label index="firma">Firma</label>
+			<label index="strasse">Straße / Nr.</label>
+			<label index="plz">PLZ</label>
+			<label index="ort">Ort</label>
+			<label index="telefon">Telefon</label>
+			<label index="email">E-Mail</label>
+			<label index="nachricht">Mitteilung / Anfrage</label>
+			<label index="captcha">Sicherheitscode</label>
+			<label index="senden">Abschicken</label>
+			<label index="bittewaehlen">Bitte wählen</label>
+			<label index="herr">Herr</label>
+			<label index="frau">Frau</label>
+			<label index="error_vorname_required">Geben Sie Ihren Vornamen ein.</label>
+			<label index="error_nachname_required">Geben Sie Ihren Nachnamen ein.</label>
+			<label index="error_anrede_required">Wählen Sie eine Anrede aus.</label>
+			<label index="error_strasse_required">Geben Sie die Straße ein.</label>
+			<label index="error_hausnummer_required">Geben Sie die Hausnummer ein.</label>
+			<label index="error_plz_required">Geben Sie die Postleitzahl ein.</label>
+			<label index="error_ort_required">Geben Sie den Ort ein.</label>
+			<label index="error_telefon_required">Geben Sie eine Telefonnummer ein.</label>
+			<label index="error_email_required">Geben Sie eine E-Mail-Adresse ein.</label>
+			<label index="error_email_email">Die eingegebene E-Mail Adresse ist ungültig.</label>
+			<label index="error_nachricht_required">Geben Sie eine Nachricht ein.</label>
+			<label index="error_nachricht_minlength">Die Nachricht muss mindestens 10 Zeichen lang sein.</label>
+		</languageKey>
+	</data>
+</T3locallang>

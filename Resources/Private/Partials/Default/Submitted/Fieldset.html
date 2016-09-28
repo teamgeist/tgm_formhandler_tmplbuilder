@@ -1,0 +1,10 @@
+{namespace t=TGM\TgmFormhandlerTmplbuilder\ViewHelpers}
+
+<t:wrap partial="SubmitCondition" arguments="{submitCondition: submitCondition}">
+	<f:if condition="{legend}">
+	    <tr>
+	        <td colspan="2"><h4>{legend}</h4></td>
+	    </tr>
+	</f:if>
+	RENDER_CHILD_NODES_HERE
+</t:wrap>
