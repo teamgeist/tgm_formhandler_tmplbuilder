@@ -4,7 +4,7 @@
 <t:wrap partial="FieldWrap" arguments="{_all}">
     <textarea
         name="###formValuesPrefix###[{fieldname}]"
-        class="form-control" id="{fieldname}"
+        class="form-control {class}" id="{fieldname}"
         {f:render(partial: 'Placeholder', arguments: {required: required, label-size: label-size, fieldname: fieldname, placeholder: placeholder})}
         {f:render(partial: 'DataTags', arguments: {requires-field: requires-field, requires-value: requires-value, data-tags: data-tags})}
         {f:if(condition: required, then: 'required="required"')}
