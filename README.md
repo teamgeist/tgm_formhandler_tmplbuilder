@@ -50,13 +50,20 @@ plugin.Tx_Formhandler.settings.predef.tmplbuilder-contact {
 Pro Formular gibt es maximal vier Dateien.
 
 1. Eine optionale Sprachdatei.
+
    Feldnamen und Index müssen übereinstimmen um Labels ordnungsgemäß zu erzeugen.
    Häufig verwendete Felder sind in der shared.xml der Extension vorhanden.
+
 2. Formularfelder.html (Partial)
+
    Für das Formular und Submitted sowie Mailtemplates verwendete Datei in der alle Felder erstellt werden. Siehe Formularerstellung.
+
 3. Form.html
+
    Wrappt das Form Tag um Formularfelder.html
+
 4. Submitted.html
+
    Submitted und Mail Templates anhand von Formularfelder.html.
 
 ## Formularerstellung
