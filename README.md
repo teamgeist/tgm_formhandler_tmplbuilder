@@ -57,7 +57,7 @@ Pro Formular gibt es maximal vier Dateien.
 4. Submitted.html
    Submitted und Mail Templates anhand von Formularfelder.html.
 
-### Formularerstellung
+## Formularerstellung
 
 Alle Formularfelder werden in Formularfelder.html erstellt. Pro Feldtyp gibt es im Hintergrund Partials die anhand der übergebenen
 Parameter das Formularfeld rendern.
@@ -68,7 +68,7 @@ Parameter das Formularfeld rendern.
     arguments="{fieldname: 'anrede', options: {0: 'herr', 1: 'frau'}, field-size: 'col-md-6', label-size: 'col-md-6', required: 1, prepend: ' '}" />
 ```
 
-#### <a id="fieldsettings"></a> Typen & Argumente
+### <a id="fieldsettings"></a> Typen & Argumente
 
 Die folgenden Formularfelder existieren:
 
@@ -101,7 +101,7 @@ requires-value | Wert des benötigten Feldes damit das Feld sichtbar wird | inpu
 btnClass | CSS-Klasse des Buttons | submit | btn-primary
 glyphicon | Icon im Submit Button | submit | glyphicon-circle-arrow-right
 
-#### <a id="groups"></a> Fieldgroups und Fieldsets
+## <a id="groups"></a> Fieldgroups und Fieldsets
 
 Der ViewHelper `<t:wrap>` wird eingesetzt um Bereiche in Fieldsets und Fieldgroups zu Wrappen.
 Dies ist notwendig um unzulässige Tags aus dem Submitted / Mail Templates zu entfernen (siehe ViewHelper).
@@ -119,7 +119,7 @@ gibt hierbei die Breite der gesamten Gruppe an. Innerhalb des "wraps" können di
 werden um die Felder nebeneinander auszurichten. (row / col-md-4 etc.)
 
 
-### <a id="submitted"></a>Submitted & Mail-Templates
+## <a id="submitted"></a>Submitted & Mail-Templates
 
 In der Datei Submitted.html wird das Formularfelder-"Partial" gerendet. Durch den ViewHelper `<t:wrap>` und
 `<t:betterStripTags>` wird das gesamte Formular zu einer Tabelle umformatiert. Dazu werden in Submitted.html andere Partials für
@@ -131,7 +131,7 @@ Zur Validierung des Formulars wird formvalidation.io verwendet.
 
 Durch das hinzufügen der CSS-Klasse "date" wird der Bootstrap Datepicker automatisch auf entsprechenden Felder aktivert.
 
-#### <a id="javascript"></a>Conditional-Logic von Feldern
+### <a id="javascript"></a>Conditional-Logic von Feldern
 
 Die Attribute **"requires-field" und "requires-value"** welche für Input und Textarea-Felder zur Verfügung stehen können auch auf beliebige DOM-Elemente verwendet werden um diese entsprechend auszublenden.
 
@@ -141,6 +141,6 @@ andere vollständig valide ist.
 
 ## <a id="backbone"></a>Backbone
 
-#### Form / Submitted Partials
+### Form / Submitted Partials
 In Form.html und Submitted.html werden für Felder unterschiedliche Partials verwendet (Partials/Submitted & Partials/Form).
 In den Konstanten kann für diese ein alternative Pfad hinterlegt werden um diese zu modifzieren.
