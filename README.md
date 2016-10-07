@@ -45,6 +45,8 @@ plugin.Tx_Formhandler.settings.predef.tmplbuilder-contact {
 
 ## <a id="templating"></a> Templating
 
+![files](Resources/Public/Img/formfiles.jpg "Logo Title Text 1")
+
 Pro Formular gibt es maximal vier Dateien.
 
 1. Eine optionale Sprachdatei.
