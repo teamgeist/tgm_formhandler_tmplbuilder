@@ -3,7 +3,12 @@
 
 <t:wrap partial="FieldWrap" arguments="{_all}">
     <select id="{fieldname}" class="form-control {class}" name="###formValuesPrefix###[{fieldname}]" {f:if(condition: required, then: 'required="required"')} {f:if(condition: readonly, then: 'readonly="readonly"')}>
-        <option value="">{f:if(condition: prepend, then: prepend, else: '###LLL:bittewaehlen###')}</option>
+        <f:if condition="{noPrepend}">
+            <f:then></f:then>
+            <f:else>
+                <option value="">{f:if(condition: prepend, then: prepend, else: '###LLL:bittewaehlen###')}</option>
+            </f:else>
+        </f:if>
         <f:for each="{options}" as="option">
             <option value="{option}" ###selected_{fieldname}_{option}###>###LLL:{option}###</option>
         </f:for>
