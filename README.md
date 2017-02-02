@@ -97,6 +97,7 @@ field-size | Bootstrap Klasse und / oder weitere Klassen die dem Feld hinzugefü
 label-size | Siehe field-size. Label **nur sichtbar** wenn angegeben. | alle |
 options | Array mit den möglichen Auswahlmöglichkeiten (Beispiel s.o.). Pro Wert **muss** das entsprechende Label in der Sprachdatei existieren. | select, radio, checkbox
 prepend | Auswahlmöglichkeit ála "bitte wählen". | select | `###LLL:bittewaehlen###`
+noPrepend | Verhindert ein leeres Selectfeld, sodass automatisch erster Wert | select | 
 class | Zusätzliche CSS-Klasse fürs Formularfeld | input, select, textarea
 required | Pflichtfeld? | alle
 readonly | Nur lesen? | **nicht** checkbox und radio
